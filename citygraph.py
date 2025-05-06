@@ -22,7 +22,7 @@ class Graph:
     else:
       raise ValueError("Both vertices must exist in the graph.")
 
-  # def
+  # def dijkstra(self, startVert): # greedy algorithms not needed
 
   def display(self):
     # Display adjacency list
