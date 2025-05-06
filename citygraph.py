@@ -29,3 +29,7 @@ class Graph:
     for vertex, edges in self.adj_list.items():
       print(f"{vertex}: {edges}")
 
+  def bfs():
+
+  def dfs():
+
