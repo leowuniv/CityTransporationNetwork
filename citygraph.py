@@ -1,4 +1,7 @@
 # Graph
+'''
+Analysis is included below in a comment box
+'''
 
 import heap
 
@@ -57,3 +60,14 @@ def main(): # tester for city network
 if __name__ == "__main__":
     main()
 
+# --------------------------------------------------------------------------
+
+# Analysis Portion
+# ==========================================================================
+'''
+  After observing the works between BFS and DFS, we are able to indicate that BFS and DFS have distinct differences. To begin, in the context of our transportation network, BFS is...
+
+  The scenarios in which we would prefer BFS over DFS is...
+
+
+'''
