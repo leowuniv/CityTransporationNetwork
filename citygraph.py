@@ -53,9 +53,10 @@ class Graph:
       vert = notVisited.pop()
       visited.add(vert)
       print(vert)
-      for vert in self.adj_list[vert]:
-        if vert not in visited:
-            notVisited.insert(0,vert)
+      for adjVert, _ in self.adj_list[vert]:
+        if adjVert not in visited:
+            notVisited.insert(0,adjVert)
+            visited.add(adjVert)
 
   def dfs(self, startVert):
     '''
@@ -69,9 +70,10 @@ class Graph:
       vert = notVisited.pop()
       visited.add(vert)
       print(vert)
-      for vert in self.adj_list[vert]:
-        if vert not in visited:
-            notVisited.append(vert)
+      for adjVert, _ in self.adj_list[vert]:
+        if adjVert not in visited:
+            notVisited.append(adjVert)
+            visited.add(adjVert)
 
   def dijkstra(self, startVert) -> dict:
     '''
@@ -188,11 +190,16 @@ def main(): # tester for city network
   cityNetwork.addEdge("Harvard Museum of Natural History & Arts", "Harvard University")
   cityNetwork.addEdge("Harvard Square", "Harvard University")
   
-  
+  cityNetwork.display()
+  print("\nBreadth first search:")
+  cityNetwork.bfs("Grand Library of All Books")
+  print("\nDepth first search:")
+  cityNetwork.dfs("Grand Library of All Books")
 
   
-  cityNetwork.display()
-  print(cityNetwork.route("Grand Library of All Books","Grocery Store"))
+  start = "Grand Library of All Books"
+  end = "Grocery Store"
+  print(f"\nShortest route from {start} to {end}: {cityNetwork.route(start,end)}")
   
 
 if __name__ == "__main__":
