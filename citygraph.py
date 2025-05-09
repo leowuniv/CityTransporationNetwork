@@ -11,8 +11,8 @@ class Graph:
   '''
   def __init__(self):
     # Dictionary to store adjacency list with weights
-    self.adj_list = {}
-    self.edges = []
+    self.adj_list = {} # nodes = landmarks
+    self.edges = [] # edges = roads in between the landmarks
     
   def addVertex(self, vertex):
     '''
