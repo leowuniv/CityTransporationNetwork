@@ -98,9 +98,9 @@ class Graph:
         if adjacentVertex not in visited:
           # neighbor distance through current vertex
           newDistance = currentDistance + dist
-          if newDistance < dists[vertex]:
+          if newDistance < dists[adjacentVertex]:
             # if smaller distance than previous, add it to path
-            dists[vertex] = newDistance
+            dists[adjacentVertex] = newDistance
             heapq.heappush(pq, (newDistance, adjacentVertex))
 
     return dists
