@@ -153,7 +153,7 @@ def main(): # tester for city network
   cityNetwork.addVertex("Starbucks")
   cityNetwork.addVertex("Grocery Store")
   cityNetwork.addVertex("Subway Metro Station")
-  #roads (20)
+  #roads (15+)
   cityNetwork.addEdge("Grand Library of All Books", "Harvard University")
   cityNetwork.addEdge("Grand Library of All Books", "Charles River")
   cityNetwork.addEdge("Grand Library of All Books", "MIT")
