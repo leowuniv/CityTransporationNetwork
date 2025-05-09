@@ -123,7 +123,10 @@ if __name__ == "__main__":
 
 # --------------------------------------------------------------------------
 
-# Analysis Portion
+# Analysis Portion (Report)
+'''
+Document detailing your implementation, test cases, results, and your analysis of BFS vs. DFS in this application
+'''
 # ==========================================================================
 '''
   After observing the works between BFS and DFS, we are able to indicate that BFS and DFS have distinct differences. To begin, in the context of our transportation network, BFS is...
@@ -132,3 +135,11 @@ if __name__ == "__main__":
 
 
 '''
+
+# Documentation Output Portion 
+# ==========================================================================
+'''
+Please refer to the documentation file to see output screenshots
+'''
+
+# ----------------------------------------------------------------------------
