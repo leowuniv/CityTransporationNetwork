@@ -78,7 +78,43 @@ def main(): # tester for city network
   # Create a method to instantiate a sample city network with at least 10 landmarks and 15 roads.
   # Demonstrate both BFS and DFS traversals starting from a given landmark.
   cityNetwork = Graph()
-  landmarks = []
+  #landmarks (10)
+  cityNetwork.addVertex("Grand Library of All Books")
+  cityNetwork.addVertex("Harvard University")
+  cityNetwork.addVertex("Charles River")
+  cityNetwork.addVertex("Harvard Square")
+  cityNetwork.addVertex("Harvard Museum of Natural History & Arts")
+  cityNetwork.addVertex("MIT")
+  cityNetwork.addVertex("Automated McDonalds")
+  cityNetwork.addVertex("Starbucks")
+  cityNetwork.addVertex("Grocery Store")
+  cityNetwork.addVertex("Subway Metro Station")
+  #roads (20)
+  cityNetwork.addEdge("Grand Library of All Books", "Harvard University")
+  cityNetwork.addEdge("Grand Library of All Books", "Charles River")
+  cityNetwork.addEdge("Grand Library of All Books", "MIT")
+  cityNetwork.addEdge("Grand Library of All Books", "Harvard Square")
+  cityNetwork.addEdge("Grand Library of All Books", "Harvard Museum of Natural History & Arts")
+  
+  cityNetwork.addEdge("Harvard University", "Harvard Square")
+  cityNetwork.addEdge("Harvard University", "Harvard Museum of Natural History & Arts")
+  cityNetwork.addEdge("Harvard University", "Grand Library of All Books")
+  cityNetwork.addEdge("Harvard University", "Starbucks")
+  cityNetwork.addEdge("Harvard University", "Subway Metro Station")
+  
+  cityNetwork.addEdge("MIT", "Grand Library of All Books")
+  cityNetwork.addEdge("Grocery Store", "Automated McDonalds") # error testing if Mcdonalds lower case won't work
+  cityNetwork.addEdge("Automated McDonalds", "Charles River")
+  cityNetwork.addEdge("MIT", "Starbucks")
+  cityNetwork.addEdge("MIT", "Subway Metro Station")
+  
+  cityNetwork.addEdge("Subway Metro Station", "Grocery Store")
+  cityNetwork.addEdge("Subway Metro Station", "Automated McDonalds")
+  cityNetwork.addEdge("Subway Metro Station", "Harvard University")
+  cityNetwork.addEdge("Subway Metro Station", "MIT")
+  cityNetwork.addEdge("Subway Metro Station", "Charles River")
+  
+  cityNetwork.display()
   
 
 if __name__ == "__main__":
