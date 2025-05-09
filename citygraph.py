@@ -3,7 +3,7 @@
 Analysis is included below in a comment box
 '''
 
-import heap
+import heapq
 
 class Graph:
   '''
@@ -43,36 +43,37 @@ class Graph:
     for vertex, edges in self.adj_list.items():
       print(f"{vertex}: {edges}")
 
-  def bfs(self):
+  def bfs(self, startVert):
     '''
     This class for BFS prints out the order of landmarks visited
     '''
-    visited = []
-    '''
-    1. Start by creating an empty set and Queue of vertices to visit,
-    putting the source vertex in the queue and setting it as visited in
-    the array.
-    2.While the Queue is not empty:
-    1. Take the front item of the queue and print it
-    2. Add all its unvisited adjacent vertices to the back of the queue while
-    also marking them as visited to avoid adding them again.
-    '''
+    visited = set()
+    # our queue for vertices to visit
+    notVisited:list = [startVert]
 
-  def dfs(self):
+    while len(notVisited) > 0:
+      vert = notVisited.pop()
+      visited.add(vert)
+      print(vert)
+      for vert in self.adj_list[vert]:
+        if vert not in visited:
+            notVisited.insert(0,vert)
+
+  def dfs(self, startVert):
     '''
     This class for DFS is using a stack to print out the order of landmarks visited
     '''
-    visited = []
-    '''
-    1. Create new stack and Boolean array, start at source vertex
-    and add it to stack.
-    2. While the Stack is not empty:
-    1. Pop a node from the stack to use
-    2. If that node has not been visited, mark it as being visited and print
-    the node
-    3. For all non-visited adjacent nodes to the current node, push them
-    onto the stack
-    '''
+    visited = set()
+    # our stack for vertices to visit
+    notVisited:list = [startVert]
+
+    while len(notVisited) > 0:
+      vert = notVisited.pop()
+      visited.add(vert)
+      print(vert)
+      for vert in self.adj_list[vert]:
+        if vert not in visited:
+            notVisited.append(vert)
 
 def main(): # tester for city network
   # Create a method to instantiate a sample city network with at least 10 landmarks and 15 roads.
