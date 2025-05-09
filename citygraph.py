@@ -36,8 +36,6 @@ class Graph:
     else:
       raise ValueError("Both vertices must exist in the graph.")
 
-  # def dijkstra(self, startVert): # greedy algorithms not needed
-
   def display(self):
     # Display adjacency list
     for vertex, edges in self.adj_list.items():
@@ -45,7 +43,7 @@ class Graph:
 
   def bfs(self, startVert):
     '''
-    This class for BFS prints out the order of landmarks visited
+    This method for BFS prints out the order of landmarks visited
     '''
     visited = set()
     # our queue for vertices to visit
@@ -61,7 +59,7 @@ class Graph:
 
   def dfs(self, startVert):
     '''
-    This class for DFS is using a stack to print out the order of landmarks visited
+    This method for DFS is using a stack to print out the order of landmarks visited
     '''
     visited = set()
     # our stack for vertices to visit
@@ -74,6 +72,39 @@ class Graph:
       for vert in self.adj_list[vert]:
         if vert not in visited:
             notVisited.append(vert)
+
+  def route(self, startVert, endVert) -> dict["Unknown", "Unknown"]:
+    '''
+    This method uses Djikstra's algoroithm to find the shortest path between two vertices
+    '''
+    if startVert not in self.adj_list or endVert not in self.adj_list:
+      raise ValueError("Both vertices must exist in the graph.")
+    
+    # track w/ heap the next closest to visit
+    pq = []
+    heapq.heappush(pq, (0, startVert))
+    dists = {vertex: float("inf") for vertex in self.adj_list}
+    # ordered keys for which vertex to pass through
+    dists[startVert] = 0
+    visited = set()
+    while pq:
+      currentDistance, vertex = pq.pop()
+
+      if vertex in visited:
+        continue
+      visited.add(vertex)
+
+      for adjacentVertex, dist in self.adj_list[vertex]:
+        if adjacentVertex not in visited:
+          # neighbor distance through current vertex
+          newDistance = currentDistance + dist
+          if newDistance < dists[vertex]:
+            # if smaller distance than previous, add it to path
+            dists[vertex] = newDistance
+            heapq.heappush(pq, (newDistance, adjacentVertex))
+
+    return dists
+
 
 def main(): # tester for city network
   # Create a method to instantiate a sample city network with at least 10 landmarks and 15 roads.
@@ -116,6 +147,7 @@ def main(): # tester for city network
   cityNetwork.addEdge("Subway Metro Station", "Charles River")
   
   cityNetwork.display()
+  print(cityNetwork.route("Grand Library of All Books","Grocery Store"))
   
 
 if __name__ == "__main__":
