@@ -43,15 +43,17 @@ class Graph:
     for vertex, edges in self.adj_list.items():
       print(f"{vertex}: {edges}")
 
-  def bfs():
+  def bfs(self):
     '''
     This class for BFS prints out the order of landmarks visited
     '''
+    visited = []
 
-  def dfs():
+  def dfs(self):
     '''
     This class for DFS is using a stack to print out the order of landmarks visited
     '''
+    visited = []
 
 def main(): # tester for city network
   # Create a method to instantiate a sample city network with at least 10 landmarks and 15 roads.
