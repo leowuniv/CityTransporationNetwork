@@ -178,6 +178,19 @@ def main(): # tester for city network
   cityNetwork.addEdge("Subway Metro Station", "MIT")
   cityNetwork.addEdge("Subway Metro Station", "Charles River")
   
+  cityNetwork.addEdge("Charles River", "Subway Metro Station")
+  cityNetwork.addEdge("Automated McDonalds", "Subway Metro Station")
+  cityNetwork.addEdge("Grocery Store", "Subway Metro Station")
+  cityNetwork.addEdge("Starbucks", "MIT")
+  cityNetwork.addEdge("Starbucks", "Harvard University")
+  cityNetwork.addEdge("Harvard Square", "Grand Library of All Books")
+  cityNetwork.addEdge("Harvard Museum of Natural History & Arts", "Grand Library of All Books")
+  cityNetwork.addEdge("Harvard Museum of Natural History & Arts", "Harvard University")
+  cityNetwork.addEdge("Harvard Square", "Harvard University")
+  
+  
+
+  
   cityNetwork.display()
   print(cityNetwork.route("Grand Library of All Books","Grocery Store"))
   
