@@ -1,1 +1,1 @@
-
+# Documentation: Submit output screenshots.
