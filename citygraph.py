@@ -131,6 +131,14 @@ Document detailing your implementation, test cases, results, and your analysis o
 '''
   After observing the works between BFS and DFS, we are able to indicate that BFS and DFS have distinct differences. To begin, in the context of our transportation network, BFS is...
 
+  The difference between Breadth-First Search (BFS) and Depth-First Search (DFS) is that BFS visits all of its neighbors from a star vertex before it visits all unvisited neighbors based 
+  on the distance from the starting point compared to DFS where we go as deep into a graph as possible and backtrack if a deadend is hit. 
+
+  The time complexities of BFS and DFS is O(V + E), where V is the number of vertices and E is the number of edges but may depend on the graph's structure. DFS is more space efficient 
+  than BFS since it doesn't need to store all the vertices of a level.
+
+  In the context of this project... 
+  
   The scenarios in which we would prefer BFS over DFS is...
 
 
