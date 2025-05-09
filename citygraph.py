@@ -28,10 +28,10 @@ class Graph:
     '''
     Adds edge
     '''
-    # Add weighted edge between V1 and V2 (Undirected Graph)
+    # Add weighted edge between V1 and V2 for (Undirected Graph); Directed graph need 1 edge
     if vertex1 in self.adj_list and vertex2 in self.adj_list:
       self.adj_list[vertex1].append([vertex2, weight])
-      self.adj_list[vertex2].append([vertex1, weight])
+      #self.adj_list[vertex2].append([vertex1, weight])
       self.edges.append((weight, vertex1, vertex2))
     else:
       raise ValueError("Both vertices must exist in the graph.")
