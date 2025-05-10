@@ -227,8 +227,11 @@ Write a brief analysis of the differences between BFS and DFS in the context of 
   The time complexities of BFS and DFS is O(V + E), where V is the number of vertices and E is the number of edges but may depend on the graph's structure. DFS is more space efficient 
   than BFS since it doesn't need to store all the vertices of a level.
 
-  In the context of this project... 
-  
+  In the context of this project, we have implemented a graph and dijkstra's method based on and adjusted from the classes' lectures. The BFS method is implemented using a queue while  
+  the DFS method uses a stack. The test cases include creating vertices and edges to test if the shortest path is given and if the searching methods work. The results of the test cases is that the program works. We 
+  even tested for errors such as raising a value error when an edge is implemented incorrectly. For instance, if we mispell a vertex that has not been established and we try mapping it 
+  as a road, an error will occur. 
+
   The scenarios in which we would prefer BFS over DFS is...
 
 
