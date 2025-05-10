@@ -223,7 +223,7 @@ Write a brief analysis of the differences between BFS and DFS in the context of 
   because it is able to find the shortest path to all vertices when all edge weights are equal. DFS is more useful when we need to visit the graph very deeply to find something where
   the shortest path doesn't need to be considered. 
 
-  The difference between Breadth-First Search (BFS) and Depth-First Search (DFS) is that BFS visits all of its neighbors from a star vertex before it visits all unvisited neighbors based 
+  The difference between Breadth-First Search (BFS) and Depth-First Search (DFS) is that BFS visits all of its neighbors from a start vertex before it visits all unvisited neighbors based 
   on the distance from the starting point compared to DFS where we go as deep into a graph as possible and backtrack if a deadend is hit. 
 
   The time complexities of BFS and DFS is O(V + E), where V is the number of vertices and E is the number of edges but may depend on the graph's structure. DFS is more space efficient 
