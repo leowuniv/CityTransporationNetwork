@@ -220,7 +220,8 @@ Write a brief analysis of the differences between BFS and DFS in the context of 
 # ==========================================================================
 '''
   After observing the works between BFS and DFS, we are able to indicate that BFS and DFS have distinct differences. To begin, in the context of our transportation network, BFS is useful 
-  e
+  because it is able to find the shortest path to all vertices when all edge weights are equal. DFS is more useful when we need to visit the graph very deeply to find something where
+  the shortest path doesn't need to be considered. 
 
   The difference between Breadth-First Search (BFS) and Depth-First Search (DFS) is that BFS visits all of its neighbors from a star vertex before it visits all unvisited neighbors based 
   on the distance from the starting point compared to DFS where we go as deep into a graph as possible and backtrack if a deadend is hit. 
@@ -233,7 +234,8 @@ Write a brief analysis of the differences between BFS and DFS in the context of 
   even tested for errors such as raising a value error when an edge is implemented incorrectly. For instance, if we mispell a vertex that has not been established and we try mapping it 
   as a road, an error will occur. 
 
-  The scenarios in which we would prefer BFS over DFS is...
+  The scenarios in which we would prefer BFS over DFS is when we want to find the shortest travel time between two landmarks while DFS would be more useful if we want to check if a landmark
+  or destination is even reachable. 
 
 
 
