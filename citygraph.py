@@ -108,10 +108,11 @@ class Graph:
 
     return dists
 
-  def route(self, startVert, endVert) -> list:
+  def route(self, startVert, endVert) -> list: 
     '''
     This method uses Dijkstra's algoroithm to find the shortest path between two vertices.
     '''
+    # Implement a function that uses BFS to find the shortest path (in terms of the number of edges) from one landmark to another if one exists.
     if endVert not in self.adj_list:
       raise ValueError("Both vertices must exist in the graph.")
     dists = self.dijkstra(startVert)
@@ -200,7 +201,7 @@ def main(): # tester for city network
   
   start = "Grand Library of All Books"
   end = "Grocery Store"
-  print(f"\nShortest route from {start} to {end}: {cityNetwork.route(start,end)}")
+  print(f"\nShortest route from {start} to {end}: {cityNetwork.route(start,end)}") # Print out the route (sequence of landmarks) of the shortest path.
 
   cityNetwork.addVertex("testing")
   print(f"\nShortest route from {"testing"} to {end}: {cityNetwork.route("testing",end)}")
