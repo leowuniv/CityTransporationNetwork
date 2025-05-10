@@ -79,6 +79,7 @@ class Graph:
     '''
     Dijkstra used to find the shortest distance to vertices from the start vertex.
     '''
+    # TODO make sure there are valid edges to traverse through
     if startVert not in self.adj_list:
       raise ValueError("Both vertices must exist in the graph.")
     
@@ -200,6 +201,9 @@ def main(): # tester for city network
   start = "Grand Library of All Books"
   end = "Grocery Store"
   print(f"\nShortest route from {start} to {end}: {cityNetwork.route(start,end)}")
+
+  cityNetwork.addVertex("testing")
+  print(f"\nShortest route from {"testing"} to {end}: {cityNetwork.route("testing",end)}")
   
 
 if __name__ == "__main__":
