@@ -236,10 +236,6 @@ Write a brief analysis of the differences between BFS and DFS in the context of 
 
   The scenarios in which we would prefer BFS over DFS is when we want to find the shortest travel time between two landmarks while DFS would be more useful if we want to check if a landmark
   or destination is even reachable. 
-
-
-
-
 '''
 
 # Documentation Output Portion 
